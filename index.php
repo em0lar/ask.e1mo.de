@@ -9,8 +9,6 @@ $default_config = require('config.default.php');
 $config = require('config.php');
 $config = array_replace_recursive($default_config, $config);
 
-echo $config;
-
 define('debug', $config['page']['debug']);
 
 if (debug) {
@@ -159,6 +157,7 @@ if (isset($_POST['message']) && empty($_SESSION['message'])) {
         exit();
     }
 }
+echo $config['email']['smtp']['pass'];
 session_unset();
 ?>
 
