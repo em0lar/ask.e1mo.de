@@ -9,6 +9,8 @@ $default_config = require('config.default.php');
 $config = require('config.php');
 $config = array_replace_recursive($default_config, $config);
 
+var_dump($config);
+
 define('debug', $config['page']['debug']);
 
 if (debug) {
